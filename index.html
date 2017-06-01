@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue</title>
+</head>
+
+<body>
+    <div id="root">
+        <input type="text" name="vue" value="" id="input" v-model="message">
+        <p>the value is {{message}}</p>
+    </div>
+
+
+    <script src="vue.js"></script>
+    <script>
+        let
+        // document.querySelector('#input').value = data.message;
+        new Vue({
+            el: '#root',
+            data: {
+                message: 'hello world'
+            }
+        })
+    </script>
+</body>
+
+</html>
