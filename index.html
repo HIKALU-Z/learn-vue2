@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vue</title>
+    <style>
+    .color-red{
+        color: red;
+    }
+    </style>
 </head>
 
 <body>
@@ -14,7 +19,10 @@
             <li v-for="name in names" v-text="name"></li>
         </ul>
         <input type="" name="" value="" id="nameInput" v-model = "newName">
-        <button id='addName' v-on:click="addName">Add Name</button>
+        <button id='addName' @click="addName">Add Name</button>
+        <!--<button v-bind:title="title">Hover on me</button>-->
+        <button :title="title">Hover on me</button>
+        <button :class="{'color-red':isLoading}" @click="toggleClass">hello burning</button>
 
     </div>
 
@@ -25,6 +33,8 @@
         var app = new Vue({
             el: '#root',
             data: {
+                title:'i am  a title',
+                isLoading:false,
                 newName : '',
                 names: ['joe', 'jack', 'black', 'sai']
             },
@@ -32,6 +42,9 @@
                 addName(){
                     this.names.push(this.newName);
                     this.newName='';
+                },
+                toggleClass(){
+                    this.isLoading = !this.isLoading
                 }
             }
         })
