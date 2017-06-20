@@ -6,84 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Vue</title>
-    <style>
-    .color-red{
-        color: red;
-    }
-    </style>
+    <style></style>
 </head>
 
 <body>
     <div id="root">
-        <ul>
-            <li v-for="name in names" v-text="name"></li>
-        </ul>
-        <input type="" name="" value="" id="nameInput" v-model = "newName">
-        <button id='addName' @click="addName">Add Name</button>
-        <!--<button v-bind:title="title">Hover on me</button>-->
-        <button :title="title">Hover on me</button>
-        <button :class="{'color-red':isLoading}" @click="toggleClass">hello burning</button>
-        <h1>{{reverseMessage}}</h1>
-        <hr>
-        <h2>All Tasks</h2>
-        <ul>
-            <li v-for="task in tasks" v-text="task.description"></li>
-        </ul>
-        <h2>inCompleted</h2>
-        <ul>
-            <li v-for="task in inCompleteTasks"  v-text="task.description"></li>
-        </ul>
+        <task>go to the bank</task>
+        <task>go to the bank</task>
+        <task>go to the bank</task>
     </div>
 
 
     <script src="js/vue.js"></script>
-    <script>
-        var app = new Vue({
-            el: '#root',
-            data: {
-                title:'i am  a title',
-                isLoading:false,
-                newName : '',
-                names: ['joe', 'jack', 'black', 'sai'],
-                message:'hello world',
-                tasks:[
-                    {description:'失落沙洲1',completed:true},
-                    {description:'失落沙洲2',completed:false},
-                    {description:'失落沙洲3',completed:false},
-                    {description:'失落沙洲4',completed:true},
-                    {description:'失落沙洲5',completed:true}
-                ]
-            },
-            methods:{
-                addName(){
-                    this.names.push(this.newName);
-                    this.newName='';
-                },
-                toggleClass(){
-                    this.isLoading = !this.isLoading
-                }
-            },
-            computed:{
-                reverseMessage(){
-                    return this.message.split('').reverse().join('')
-                },
-                inCompleteTasks(){
-                    return this.tasks.filter(task=>! task.completed)
-//                    it's equle to this function
-//                    this.tasks.filter(function (task) {
-//                        return !task.completed;
-//                    })
-                }
-            }
-        })
-
-     /*   document.querySelector('#addName').addEventListener('click', () = > {
-            let name = document.querySelector('#nameInput');
-            app.names.push(name.value);
-            name.value = '';
-        });
-*/
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
