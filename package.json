@@ -1,0 +1,23 @@
+{
+  "name": "learn-vue2",
+  "version": "1.0.0",
+  "description": "## 关于Devtools",
+  "main": "main.js",
+  "dependencies": {
+    "bulma": "^0.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HIKALU-Z/learn-vue2.git"
+  },
+  "author": "hikalu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HIKALU-Z/learn-vue2/issues"
+  },
+  "homepage": "https://github.com/HIKALU-Z/learn-vue2#readme"
+}
