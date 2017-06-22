@@ -1,7 +1,7 @@
 # Created by .ignore support plugin
 # IntelliJ project files
 .idea
-node_moduels
+node_modules/
+node_modules
 .gitignore
 .idea/
-js/
