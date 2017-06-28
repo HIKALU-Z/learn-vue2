@@ -5,10 +5,10 @@
 
 Vue.component('message', {
     props: ['title', 'body'],
-    data(){
-        return{
+    data() {
+        return {
             isVisible: true
-        }   
+        }
     },
     template: `
         <article class="message" v-show="isVisible">
@@ -20,6 +20,20 @@ Vue.component('message', {
                 {{body}}
             </div>
         </article>
+    `
+});
+
+Vue.component('modal', {
+    template: `
+        <div class="modal is-active">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="box">
+                  <slot></slot>
+                </div>
+            </div>
+            <button class="modal-close" @click="$emit('close')"></button>
+        </div>
     `
 });
 
@@ -48,4 +62,7 @@ Vue.component('task', {
 
 new Vue({
     el: '#root',
+    data:{
+        showModal:false
+    }
 });
