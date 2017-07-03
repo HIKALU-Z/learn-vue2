@@ -17,20 +17,8 @@
 
 <body>
 <div id="root" class="container ">
-    <!--<task-list></task-list>-->
-    <message title="Hello World" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit."></message>
-    <message title="Hello Universe" body="Bla Bla Bla"></message>
-
-    <!-- modal -->
-   <modal v-if="showModal" @close="showModal = false">
-       <p>abc</p>
-   </modal>
-   <button @click="showModal = true">Show Modal</button>
-   <tabs>
-       <tab name="About us" :selected="true"><h1>Hello 1</h1></tab>
-       <tab name="About us2"><h1>Hello 2</h1></tab>
-       <tab name="About us3"><h1>Hello 3</h1></tab>
-   </tabs>
+   <coupon @applied="onCouponApplied"></coupon>
+   <h2 v-if="couponApplied">you used the coupon!</h2>
 </div>
 
 
