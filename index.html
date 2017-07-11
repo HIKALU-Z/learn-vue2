@@ -16,14 +16,25 @@
 </head>
 
 <body>
-<div id="root" class="container ">
-   <coupon @applied="onCouponApplied"></coupon>
-   <h2 v-if="couponApplied">you used the coupon!</h2>
-</div>
+    <div id="root" class="container ">
+        <coupon @applied="onCouponApplied"></coupon>
+        <h2 v-if="couponApplied">you used the coupon!</h2>
+
+        <model>
+            <template slot="header">HIKALU</template>
+            deactivated
+            <template slot="footer">
+                <a class="button is-success">Save changes</a>
+                <a class="button">Cancel</a>
+            </template>
+        </model>
+    </div>
 
 
-<script src="js/vue.js"></script>
-<script src="main.js"></script>
+
+
+    <script src="js/vue.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>
