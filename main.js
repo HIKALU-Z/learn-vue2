@@ -27,7 +27,7 @@ Vue.component('coupon',{
 
 Vue.component('model',{
     template:`
-    <div class="modal is-active">
+    <div class="modal">
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
@@ -53,6 +53,15 @@ Vue.component('model',{
             Event.fire('applied')
         }
     }
+});
+
+
+Vue.component('progress-view',{
+   data(){
+       return{
+           completionRate:0
+       }
+   }
 });
 
 new Vue({

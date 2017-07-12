@@ -28,6 +28,14 @@
                 <a class="button">Cancel</a>
             </template>
         </model>
+
+        <progress-view inline-template>
+            <div>
+                <h1>your progress is {{completionRate}}%</h1>
+                <button @click="completionRate += 10">updated completionRate</button>
+            </div>
+            
+        </progress-view>
     </div>
 
 
