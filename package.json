@@ -6,7 +6,10 @@
   "dependencies": {
     "bulma": "^0.4.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
