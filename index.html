@@ -2,47 +2,46 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vue</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
-    <style>
-        body {
-            padding-top: 40px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/bulma/css/bulma.css">
+  <style>
+    body {
+      padding-top: 40px;
+    }
+  </style>
 </head>
 
 <body>
-    <div id="root" class="container ">
-        <coupon @applied="onCouponApplied"></coupon>
-        <h2 v-if="couponApplied">you used the coupon!</h2>
+  <div id="root" class="container ">
+    <coupon @applied="onCouponApplied"></coupon>
+    <h2 v-if="couponApplied">you used the coupon!</h2>
 
-        <model>
-            <template slot="header">HIKALU</template>
-            deactivated
-            <template slot="footer">
-                <a class="button is-success">Save changes</a>
-                <a class="button">Cancel</a>
-            </template>
-        </model>
+    <model>
+      <template slot="header">HIKALU</template>
+      deactivated
+      <template slot="footer">
+        <a class="button is-success">Save changes</a>
+        <a class="button">Cancel</a>
+      </template>
+    </model>
 
-        <progress-view inline-template>
-            <div>
-                <h1>your progress is {{completionRate}}%</h1>
-                <button @click="completionRate += 10">updated completionRate</button>
-            </div>
-            
-        </progress-view>
-    </div>
+    <progress-view inline-template>
+      <div>
+        <h1>your progress is {{completionRate}}%</h1>
+        <button @click="completionRate += 10">updated completionRate</button>
+      </div>
 
+    </progress-view>
+    <a href="support/station.html">click on me!</a>
+  </div>
 
-
-
-    <script src="js/vue.js"></script>
-    <script src="main.js"></script>
+  <script src="js/vue.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
+
