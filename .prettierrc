@@ -1,6 +1,6 @@
-//  这是prettier的配置文件
+
 {
-  "printWidth": 120,
+  "printWidth": 80,
   "semi": false,
   "singleQuote": true
 }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue</title>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="../node_modules/bulma/css/bulma.css">
+  <style>
+    body {
+      padding-top: 40px;
+    }
+
+    #app {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .codeplace {
+      background: #cccccc;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <input type="text" v-model="name" placeholder="some one's name">
+    <h1>hello,{{name}}</h1>
+    <p>{{date}}</p>
+    <span v-html="codeplace"></span>
+    <hr>
+    <div v-for="book of books">
+      <li>{{book.name}}</li>
+      <li>{{book.author}}</li>
+    </div>
+  </div>
+
+  <template id="content-component">
+    <div>
+      Hi~ HIKALU
+    </div>
+  </template>
+
+  <div class="family2">
+    <div id="bruce">
+      <div id="face"></div>
+      <div id="pick"></div>
+    </div>
+  </div>
+
+  <script src="../js/vue.js"></script>
+  <script src="../js/vue-router.js"></script>
+  <script src="../js/test/test.js"></script>
+</body>
+
+</html>
