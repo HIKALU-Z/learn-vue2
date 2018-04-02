@@ -1,7 +1,7 @@
 /**
  * Created by hikalu on 17/6/20.
  */
-
+/*eslint-disable*/
 window.Event = new class{
     constructor(){
         this.vue = new Vue();
@@ -43,7 +43,7 @@ Vue.component('model',{
                 <slot name="footer">
                     <a class="button is-success">Save</a>
                     <a class="button">Cancel</a>
-                </slot> 
+                </slot>
             </footer>
         </div>
     </div>
